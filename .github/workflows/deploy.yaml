@@ -56,7 +56,7 @@ jobs:
       run: |-
         docker push "gcr.io/$PROJECT_ID/$IMAGE:$GITHUB_SHA"
 
-    jobs:
+  
   terraform:
     name: 'Terraform'
     runs-on: ubuntu-latest
