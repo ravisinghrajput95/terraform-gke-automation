@@ -165,13 +165,3 @@ resource "google_container_cluster" "cluster" {
   resource_labels = var.resource_labels
 }
 
-# ---------------------------------------------------------------------------------------------------------------------
-# Prepare locals to keep the code cleaner
-# ---------------------------------------------------------------------------------------------------------------------
-
-locals {
-  latest_version     = data.google_container_engine_versions.location.latest_master_version
-  kubernetes_version = var.kubernetes_version != "latest" ? var.kubernetes_version : local.latest_version
-  network_project    = var.network_project != "" ? var.network_project : var.project
-}
-
