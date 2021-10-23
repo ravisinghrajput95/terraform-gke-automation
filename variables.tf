@@ -13,7 +13,7 @@ variable "location" {
 variable "region" {
   description = "The region for the network. If the cluster is regional, this must be the same region. Otherwise, it should be the region of the zone."
   type        = string
-  default     = "us-central1-c"
+  default     = "us-central1"
 }
 
 # ---------------------------------------------------------------------------------------------------------------------
