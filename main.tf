@@ -64,7 +64,7 @@ provider "google-beta" {
 data "google_client_config" "client" {}
 
 data "google_container_cluster" "cluster" {
-  name = module.gke-cluster.name
+  name = module.gke_cluster.name
   location = var.region
 }
   
