@@ -106,7 +106,7 @@ resource "google_container_node_pool" "node_pool" {
   name     = "main-pool"
   project  = var.project
   location = var.location
-  cluster  = var.cluster_name
+  cluster  = module.gke_cluster.name
 
   initial_node_count = "1"
 
